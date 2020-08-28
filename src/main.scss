@@ -14,8 +14,56 @@ body {
       monospace;
   }
 
+  .hero-section{
+      width: 100vw;
+      height: 100vh;
+     
+      background: linear-gradient(to top right, rgba($blue-300, 0.8), rgba($blue-700, 0.8)), url('./images/bg-img.jpg');
+      padding: 10rem;
+      text-align: center;
+      background-position: center center;
+      background-size: cover;
+
+      display: block;
+      margin: 0 auto;
+      z-index: -1;
+      @media only screen and (max-width: 800px){
+          padding: 1rem;
+      }
+
+      .shadow{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: block;
+        margin: 0 auto;
+        background-color:rgba(#fff, 0.5);
+        border-radius: 3px;
+        text-align: center;
+        height: auto;
+        width: auto;
+        padding: 1.5rem ;
+        @media only screen and (max-width: 800px){
+            width: 95%;
+            padding: 3.5rem 1.5rem;
+        }
+      }
+  }
+
   .icons{
       width: 2rem;
       height: 2rem;
       filter: invert(1) sepia(1) saturate(10) hue-rotate(175deg);
+  }
+
+  .btn{
+      background-color: $orange-500;
+      border: $orange-500 solid 1px;
+      outline: none;
+
+      &:hover{
+          background-color: $orange-300;
+          border: $orange-300 solid 1px;
+      }
   }
