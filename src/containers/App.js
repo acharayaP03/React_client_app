@@ -1,10 +1,20 @@
 import React from 'react';
 
-function App() {
+import { Provider } from "react-redux";
+import { configureStore } from "../store";
+import { BrowserRouter as Router } from "react-router-dom";
+
+const store = configureStore();
+
+const  App = ()=> {
   return (
-    <div className="App">
-      {"hello world "}
-    </div>
+    <Provider store={ store }>
+      <Router>
+        <div className="App">
+          {"hello world "}
+        </div>
+      </Router>
+    </Provider>
   );
 }
 
