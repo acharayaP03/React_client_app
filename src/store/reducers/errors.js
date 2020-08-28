@@ -1,6 +1,6 @@
 import constants from "../actionsTypes";
 
-export default (state={ message=null}, action) =>{
+export default (state={ message:null}, action) =>{
     switch (action.type){
         case constants.ADD_ERROR:
             return { ...state, message: action.error};
